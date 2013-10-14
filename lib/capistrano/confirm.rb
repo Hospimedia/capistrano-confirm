@@ -37,6 +37,7 @@ Answer the below question to make sure you are not drunk!
       end
     end
 
-    before "deploy:update_code", "deploy:confirm"
+    before "deploy", "deploy:confirm"
+    before "deploy:migrations", "deploy:confirm"
   end
 end
